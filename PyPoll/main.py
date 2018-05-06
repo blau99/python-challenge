@@ -25,7 +25,6 @@ print(candidates)
 print(new_group)
 print("The winner of the election is "+ str(candidate_winner))
 
-#new_group = new_group.append(candidate_winner)
 output_file = os.path.join("election_results.txt")
 with open(output_file, "a", newline="") as datafile:
     writer = csv.writer(datafile)
@@ -34,7 +33,5 @@ with open(output_file, "a", newline="") as datafile:
 
     new_group.to_csv(datafile,sep=' ',mode='a')
 
-#results.write("Election Results"+"\n")
 results.write("Total Votes: " + str(voters)+"\n")
 results.write("Winner: " + str(candidate_winner)+"\n")
-#results.write("--------------------------------------")
